@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Runtime and package-manager caches
+.npm/
+.yarn/
+.pnpm-store/
+.cache/
+
+# Logs and reports
+*.log
+coverage/
+dist/
+build/
+
+# Local Node upgrade evidence
+.upgrade-evidence/
+
+
+# Environment and local configuration
+.env
+.env.*
+!.env.example
+
+# macOS and editor noise
+.DS_Store
+.vscode/
+.idea/
