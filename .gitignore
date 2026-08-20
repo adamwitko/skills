@@ -16,6 +16,7 @@ build/
 # Local Node upgrade evidence
 .upgrade-evidence/
 
+
 # Environment and local configuration
 .env
 .env.*
