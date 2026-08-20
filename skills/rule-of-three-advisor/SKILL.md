@@ -10,7 +10,7 @@ Review code for the Rule of Three: when substantially similar logic appears in t
 
 ## Operating Rules
 
-- Search the relevant repository scope before forming a finding. In monorepos, identify the owning package or service and avoid unrelated workspace areas. Exclude generated, vendored, build-output, and fixture code unless it is part of the behavior under review. Follow local contribution, architecture, and testing conventions.
+- Search the relevant repository scope before forming a finding. In monorepos, identify the owning package or service and avoid unrelated workspace areas. Focus on executable or operational artifacts that affect system design and maintenance, including source code, configuration, scripts, tests, and deployment definitions. Respect `.gitignore` and equivalent ignore rules: do not inspect ignored files or directories unless the user explicitly includes them. Exclude generated, vendored, build-output, fixture, documentation-only, and agent customization content, including `SKILL.md`, `AGENT.md`, prompt, instruction, and similar agent-skill files. Follow local contribution, architecture, and testing conventions.
 - Distinguish duplicated behavior from coincidental similarity. Compare intent, inputs, outputs, invariants, error handling, side effects, lifecycle, and expected rate of change.
 - Require at least three concrete occurrences for a Rule of Three finding unless the user explicitly asks for two-instance duplication or a known design smell.
 - Prefer evidence over assertion: provide file paths, line ranges or symbols, and a short description of the shared behavior. Quote only the smallest useful snippets.
@@ -23,7 +23,7 @@ Review code for the Rule of Three: when substantially similar logic appears in t
 
 ## Workflow
 
-1. **Establish scope.** Identify files, language, runtime, owning package or service, and review target. State exclusions, including generated, vendored, build-output, fixture, or test-only code when appropriate.
+1. **Establish scope.** Identify files, language, runtime, owning package or service, and review target. Apply repository ignore rules before searching. Include executable or operational artifacts such as source code, configuration, scripts, tests, and deployment definitions. Exclude ignored paths, generated, vendored, build-output, fixture, documentation-only, and agent customization files such as `SKILL.md` and `AGENT.md`, unless the user explicitly asks to include them.
 2. **Collect candidates.** Search for repeated blocks, equivalent branches, repeated validation/serialization/error-handling flows, and near-duplicate helpers. Group occurrences by behavior, not merely names.
 3. **Validate candidates.** Inspect each occurrence in context. Confirm the shared contract and list meaningful differences. Reject groups whose only commonality is superficial syntax.
 4. **Assess the threshold.** Prioritize groups with three or more occurrences, high change frequency, bug-fix drift, or difficult consistency requirements. Treat the third meaningful occurrence as the normal refactoring trigger; do not wait for a fourth occurrence unless the evidence shows the third is intentionally independent.
