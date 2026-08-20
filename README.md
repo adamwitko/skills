@@ -18,3 +18,4 @@ Each installable skill lives in `/skills/<skill-name>/SKILL.md`.
 | --- | --- |
 | [node-upgrader](skills/node-upgrader/) | [`skills/node-upgrader/`](skills/node-upgrader/) |
 | [owasp-security-expert](skills/owasp-security-expert/) | [`skills/owasp-security-expert/`](skills/owasp-security-expert/) |
+| [osv-scanner-malware-guard](skills/osv-scanner-malware-guard/) | [`skills/osv-scanner-malware-guard/`](skills/osv-scanner-malware-guard/) |
