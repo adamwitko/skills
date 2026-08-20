@@ -19,4 +19,5 @@ Each installable skill lives in `/skills/<skill-name>/SKILL.md`.
 | [node-upgrader](skills/node-upgrader/) | [`skills/node-upgrader/`](skills/node-upgrader/) |
 | [owasp-security-expert](skills/owasp-security-expert/) | [`skills/owasp-security-expert/`](skills/owasp-security-expert/) |
 | [osv-scanner-malware-guard](skills/osv-scanner-malware-guard/) | [`skills/osv-scanner-malware-guard/`](skills/osv-scanner-malware-guard/) |
+| [production-change-readiness](skills/production-change-readiness/) | [`skills/production-change-readiness/`](skills/production-change-readiness/) |
 | [rule-of-three-advisor](skills/rule-of-three-advisor/) | [`skills/rule-of-three-advisor/`](skills/rule-of-three-advisor/) |
